@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public enum UnitType
 {
@@ -8,8 +6,8 @@ public enum UnitType
     Spearman,
     Horseman
 };
-[CreateAssetMenu(menuName = "Create Unit", fileName = "New Unit")]
-public class UnitData : ScriptableObject
+
+public abstract class BaseUnit : ScriptableObject
 {
     [SerializeField] private UnitType _unitType;
     [SerializeField] private UnitType _killUnit;
@@ -17,6 +15,7 @@ public class UnitData : ScriptableObject
     [SerializeField] private byte _damage;
 
     [SerializeField] private GameObject _unitPrefab;
-    
 
+    public abstract void Use();
+    
 }
