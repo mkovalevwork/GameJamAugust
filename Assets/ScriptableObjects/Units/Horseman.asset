@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0159a57ad4c002740b1a9a72cc11bd02, type: 3}
+  m_Script: {fileID: 11500000, guid: ed4b79c717179d0448403c775662a2f0, type: 3}
   m_Name: Horseman
   m_EditorClassIdentifier: 
-  _unitType: 2
-  _moves: 3
-  _damage: 1
-  _unitPrefab: {fileID: 0}
+  objectName: Horseman
+  prefabPrefab: {fileID: 2568199047421988651, guid: 6dd37fac5e468af4a8570a587713fda3, type: 3}

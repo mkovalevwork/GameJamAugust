@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4676404792853145009}
   - component: {fileID: -1475450676355096820}
+  - component: {fileID: -474510983937674581}
   m_Layer: 0
   m_Name: Enterpot
   m_TagString: Untagged
@@ -45,6 +46,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapObject: {fileID: 11400000, guid: 6023725c58843194fae1f4ddd46f807d, type: 2}
+  nearMapObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!65 &-474510983937674581
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676404792853145008}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4028468, y: 0.10703045, z: 0.40249014}
+  m_Center: {x: -0.0002975464, y: -0.0038871318, z: -0.00007081032}
 --- !u!1 &4676404793122753376
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,7 +74,6 @@ GameObject:
   - component: {fileID: 4676404793122753377}
   - component: {fileID: 4676404793122753380}
   - component: {fileID: 4676404793122753383}
-  - component: {fileID: 4676404793122753382}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Untagged
@@ -127,19 +144,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4676404793122753382
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4676404793122753376}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4781238144864437752
 GameObject:
   m_ObjectHideFlags: 0

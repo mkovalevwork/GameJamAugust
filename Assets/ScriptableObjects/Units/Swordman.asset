@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0159a57ad4c002740b1a9a72cc11bd02, type: 3}
+  m_Script: {fileID: 11500000, guid: d681482b5dc9b47438e479512cc434c4, type: 3}
   m_Name: Swordman
   m_EditorClassIdentifier: 
-  _unitType: 0
-  _moves: 1
-  _damage: 3
-  _unitPrefab: {fileID: 4424582500922190948, guid: 3cdf5f9a8f92c8a49991fa19ac896008, type: 3}
+  objectName: Swordman
+  prefabPrefab: {fileID: 9166935186961167301, guid: ad946ae2cfe177040a4d9c6397f43f29, type: 3}

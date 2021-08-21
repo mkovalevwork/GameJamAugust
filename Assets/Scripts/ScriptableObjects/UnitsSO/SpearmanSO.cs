@@ -5,6 +5,6 @@ public class SpearmanSO : BaseUnit
 {
     public override void Use()
     {
-        throw new System.NotImplementedException();
+        
     }
 }
