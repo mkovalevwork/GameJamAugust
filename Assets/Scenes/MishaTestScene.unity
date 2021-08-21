@@ -224,7 +224,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1213024538}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MouseInteractor, Assembly-CSharp
         m_MethodName: ClearSelected
         m_Mode: 1
@@ -594,6 +594,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1234096381}
     m_Modifications:
     - target: {fileID: -1475450676355096820, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
+      propertyPath: selector
+      value: 
+      objectReference: {fileID: 1213024540}
+    - target: {fileID: -1475450676355096820, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
       propertyPath: nearMapObjects.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -678,6 +682,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1234096381}
     m_Modifications:
+    - target: {fileID: -1475450676355096820, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
+      propertyPath: selector
+      value: 
+      objectReference: {fileID: 1213024540}
     - target: {fileID: -1475450676355096820, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
       propertyPath: activeUnit
       value: 
@@ -799,7 +807,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1213024539}
-  - component: {fileID: 1213024538}
+  - component: {fileID: 1213024540}
   m_Layer: 0
   m_Name: MouseInteractableHandler
   m_TagString: Untagged
@@ -807,21 +815,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1213024538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1213024537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82540720fd21e2d42867feb80ebde360, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  doMoveBtn: {fileID: 2112964329}
-  battleSystem: {fileID: 1706506373}
 --- !u!4 &1213024539
 Transform:
   m_ObjectHideFlags: 0
@@ -836,6 +829,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1213024540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213024537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b671db8e77579942be28a698653cc80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug_selectedEntity: {fileID: 0}
+  debug_selectedPlattform: {fileID: 0}
 --- !u!1 &1234096380
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,6 +952,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1234096381}
     m_Modifications:
     - target: {fileID: -1475450676355096820, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
+      propertyPath: selector
+      value: 
+      objectReference: {fileID: 1213024540}
+    - target: {fileID: -1475450676355096820, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
       propertyPath: activeUnit
       value: 
       objectReference: {fileID: 1342150235}
@@ -1032,6 +1043,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2568199047421988651, guid: 6dd37fac5e468af4a8570a587713fda3, type: 3}
   m_PrefabInstance: {fileID: 8562857896634023344}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1581503006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581503000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ce18930ae1f20e44a4e03f54f363577, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1706506372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,7 +1584,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1213024538}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MouseInteractor, Assembly-CSharp
         m_MethodName: DoMove
         m_Mode: 1

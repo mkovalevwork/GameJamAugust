@@ -9,8 +9,8 @@ public class MouseInteractor : MonoBehaviour
     [SerializeField] private DoMoveBtnUI doMoveBtn;
     [SerializeField] private BattleSystem battleSystem;
 
-    private MapObjectInteractable firstMapObject;
-    private MapObjectInteractable secondMapObject;
+    private CheckpointPlattform firstMapObject;
+    private CheckpointPlattform secondMapObject;
     
     private void Update()
     {
@@ -35,7 +35,7 @@ public class MouseInteractor : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            hit.collider.TryGetComponent(out MapObjectInteractable target);
+            hit.collider.TryGetComponent(out CheckpointPlattform target);
             if (target == null) return;
             firstMapObject = target;
         }
@@ -48,16 +48,16 @@ public class MouseInteractor : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            hit.collider.TryGetComponent(out MapObjectInteractable target);
+            hit.collider.TryGetComponent(out CheckpointPlattform target);
             if (target == null) return;
-            if (ArrayContains(firstMapObject.NearMapObjects, target))
+            if (ArrayContains(firstMapObject.NextDestinations, target))
               
                 secondMapObject = target;                      
         }
         doMoveBtn.gameObject.SetActive(true);        
     }
 
-    private bool ArrayContains(BaseInteractable[] array, BaseInteractable target)
+    private bool ArrayContains(BasePlattform[] array, BasePlattform target)
     {
         for (int i = 0; i < array.Length; i++)
         {

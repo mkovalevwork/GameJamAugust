@@ -1,11 +1,7 @@
 using UnityEngine;
 
-public class UnitInteractable : BaseInteractable
+public class UnitPlattform : BasePlattform
 {
     [SerializeField] private BaseUnit unit;
     [SerializeField] private bool moveDoneThisRound;
-    public override void Interact()
-    {
-        
-    }
 }
