@@ -7,6 +7,7 @@ public class MouseInteractor : MonoBehaviour
     [SerializeField] private float speed;
     [Header("Reference to DOMOVE button")]
     [SerializeField] private DoMoveBtnUI doMoveBtn;
+    [SerializeField] private BattleSystem battleSystem;
 
     private MapObjectInteractable firstMapObject;
     private MapObjectInteractable secondMapObject;
@@ -67,6 +68,20 @@ public class MouseInteractor : MonoBehaviour
    
     public void DoMove()
     {
+        if (secondMapObject.ActiveUnit)
+        {
+            bool result = battleSystem.Fight(firstMapObject.ActiveUnit, secondMapObject.ActiveUnit);
+            if (result)
+            {
+                Destroy(secondMapObject.ActiveUnit);
+                secondMapObject.setActiveUnit(null);
+            }
+            if (!result)
+            {
+
+            }
+        }
+
         Transform var1 = firstMapObject.ActiveUnit.transform;
         Vector3 var2 = firstMapObject.transform.position;
         Vector3 var3 = secondMapObject.transform.position;
@@ -76,6 +91,9 @@ public class MouseInteractor : MonoBehaviour
         firstMapObject.setActiveUnit(null);      
           
         StartCoroutine(MoveFromTo(var1, var2, var3, speed));
+        //StartCoroutine(waitForMove());
+        Debug.Log("End");
+        
         ClearSelected();
     }
    
@@ -90,6 +108,13 @@ public class MouseInteractor : MonoBehaviour
             yield return new WaitForFixedUpdate();         // Leave the routine and return here in the next frame
         }
         objectToMove.position = pos2;
+    }
+
+    private IEnumerator waitForMove()
+    {
+        Debug.Log("Start");
+        bool moveDone = (firstMapObject.ActiveUnit.transform.position == secondMapObject.transform.position);
+        yield return new WaitUntil(() => moveDone);
     }
 
     public void ClearSelected()
