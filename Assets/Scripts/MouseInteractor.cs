@@ -1,4 +1,7 @@
+using System;
 using System.Collections;
+using System.Linq;
+using UnityEditor.UI;
 using UnityEngine;
 
 public class MouseInteractor : MonoBehaviour
@@ -11,13 +14,20 @@ public class MouseInteractor : MonoBehaviour
 
     private MapObjectInteractable firstMapObject;
     private MapObjectInteractable secondMapObject;
+
+    private UnitInteractable _selectedUnit;
+    private MapObjectInteractable _selectedMapObject;
     
     private void Update()
     {
         //Если ход противника, заблокировать управление
         if(!TurnManager.Instance.isPlayerTurn()) 
             return;
-        InputChecker();
+        //InputChecker();
+        if (Input.GetMouseButtonDown(0))
+        {
+            CheckSelection();
+        }
     }
 
     private void InputChecker()
@@ -29,6 +39,45 @@ public class MouseInteractor : MonoBehaviour
             else
                 SelectSecond();           
         }
+    }
+
+    private void CheckSelection()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            string selectedObjectTag = hit.collider.gameObject.tag;
+            switch (selectedObjectTag)
+            {
+                case "PlayerUnit":
+                    hit.collider.TryGetComponent(out UnitInteractable selectedUnit);
+                    if (selectedUnit)
+                        _selectedUnit = selectedUnit;
+                    Debug.Log("Selected unit"+ _selectedUnit.gameObject.name);
+                    break;
+                case "MapObject":
+                    hit.collider.TryGetComponent(out MapObjectInteractable selectedMapObject);
+                    if (selectedMapObject)
+                    {
+                         _selectedMapObject = selectedMapObject;
+                         if (_selectedUnit && _selectedMapObject.NearMapObjects.Contains(_selectedUnit.UnitPlaced))
+                         {
+                             DoMove();
+                         }
+                    }
+                       
+                    
+                    if(_selectedMapObject != null && _selectedUnit != null)
+                    Debug.Log("Selected node"+ _selectedMapObject.gameObject.name);
+                    break;
+                default:
+                    break;
+            }
+           
+        }
+
     }
 
     private void SelectFirst()
@@ -71,7 +120,7 @@ public class MouseInteractor : MonoBehaviour
    
     public void DoMove()
     {
-        if (secondMapObject.ActiveUnit)
+        /*if (secondMapObject.ActiveUnit)
         {
             bool result = battleSystem.Fight(firstMapObject.ActiveUnit, secondMapObject.ActiveUnit);
             if (result)
@@ -83,16 +132,13 @@ public class MouseInteractor : MonoBehaviour
             {
 
             }
-        }
+        }*/
 
-        Transform var1 = firstMapObject.ActiveUnit.transform;
-        Vector3 var2 = firstMapObject.transform.position;
-        Vector3 var3 = secondMapObject.transform.position;
+        Transform var1 =_selectedUnit.transform;
+        Vector3 var2 = _selectedUnit.UnitPlaced.transform.position;
+        Vector3 var3 = _selectedMapObject.transform.position;
+        
 
-        GameObject activeUnit = firstMapObject.ActiveUnit;
-        secondMapObject.setActiveUnit(activeUnit);
-        firstMapObject.setActiveUnit(null);      
-          
         StartCoroutine(MoveFromTo(var1, var2, var3, speed));
         //StartCoroutine(waitForMove());
         Debug.Log("End");

@@ -5,6 +5,15 @@ public class UnitInteractable : BaseInteractable
 {
     [SerializeField] private BaseUnit unit;
     [SerializeField] private bool moveDoneThisRound;
+
+    [SerializeField]private MapObjectInteractable unitPlaced;
+
+    public MapObjectInteractable UnitPlaced
+    {
+        get => unitPlaced;
+        set => unitPlaced = value;
+    }
+
     private int _moves;
     public override void Interact()
     {

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -194,7 +194,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
-    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -408,6 +407,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Swordman
       objectReference: {fileID: 0}
+    - target: {fileID: 9166935186961167301, guid: ad946ae2cfe177040a4d9c6397f43f29, type: 3}
+      propertyPath: m_TagString
+      value: PlayerUnit
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad946ae2cfe177040a4d9c6397f43f29, type: 3}
 --- !u!1 &705507993
@@ -486,7 +489,6 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &705507995
@@ -609,6 +611,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enterpot (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4676404792853145008, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
+      propertyPath: m_TagString
+      value: MapObject
+      objectReference: {fileID: 0}
     - target: {fileID: 4676404792853145009, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -697,6 +703,10 @@ PrefabInstance:
     - target: {fileID: 4676404792853145008, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
       propertyPath: m_Name
       value: Enterpot
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676404792853145008, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
+      propertyPath: m_TagString
+      value: MapObject
       objectReference: {fileID: 0}
     - target: {fileID: 4676404792853145009, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
       propertyPath: m_RootOrder
@@ -945,13 +955,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 1234096381}
     m_Modifications:
     - target: {fileID: -1475450676355096820, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
-      propertyPath: activeUnit
-      value: 
-      objectReference: {fileID: 1342150235}
-    - target: {fileID: -1475450676355096820, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
       propertyPath: nearMapObjects.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -1475450676355096820, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
+      propertyPath: activeUnit
+      value: 
+      objectReference: {fileID: 1342150235}
     - target: {fileID: -1475450676355096820, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
       propertyPath: nearMapObjects.Array.data[0]
       value: 
@@ -959,6 +969,10 @@ PrefabInstance:
     - target: {fileID: 4676404792853145008, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
       propertyPath: m_Name
       value: Enterpot (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676404792853145008, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
+      propertyPath: m_TagString
+      value: MapObject
       objectReference: {fileID: 0}
     - target: {fileID: 4676404792853145009, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
       propertyPath: m_RootOrder
@@ -1138,6 +1152,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Town
       objectReference: {fileID: 0}
+    - target: {fileID: 3281102842877787675, guid: efb2b594a7c143a40a63c97657e9cb59, type: 3}
+      propertyPath: m_TagString
+      value: MapObject
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efb2b594a7c143a40a63c97657e9cb59, type: 3}
 --- !u!4 &1734351120 stripped
@@ -1246,6 +1264,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spearman
       objectReference: {fileID: 0}
+    - target: {fileID: 2031121231184812581, guid: ef78f5c7d4d6f4d4a94a788b28b1d159, type: 3}
+      propertyPath: m_TagString
+      value: PlayerUnit
+      objectReference: {fileID: 0}
+    - target: {fileID: 2708901193863396221, guid: ef78f5c7d4d6f4d4a94a788b28b1d159, type: 3}
+      propertyPath: unitPlaced
+      value: 
+      objectReference: {fileID: 1334258093}
     - target: {fileID: 5698963295436726553, guid: ef78f5c7d4d6f4d4a94a788b28b1d159, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -1289,6 +1315,14 @@ PrefabInstance:
     - target: {fileID: 5698963295436726553, guid: ef78f5c7d4d6f4d4a94a788b28b1d159, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162116028604507181, guid: ef78f5c7d4d6f4d4a94a788b28b1d159, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162116028604507181, guid: ef78f5c7d4d6f4d4a94a788b28b1d159, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef78f5c7d4d6f4d4a94a788b28b1d159, type: 3}
@@ -1396,13 +1430,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 1234096381}
     m_Modifications:
     - target: {fileID: -1475450676355096820, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
-      propertyPath: activeUnit
-      value: 
-      objectReference: {fileID: 469115504}
-    - target: {fileID: -1475450676355096820, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
       propertyPath: nearMapObjects.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -1475450676355096820, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
+      propertyPath: activeUnit
+      value: 
+      objectReference: {fileID: 469115504}
     - target: {fileID: -1475450676355096820, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
       propertyPath: nearMapObjects.Array.data[0]
       value: 
@@ -1414,6 +1448,10 @@ PrefabInstance:
     - target: {fileID: 4676404792853145008, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
       propertyPath: m_Name
       value: Enterpot (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676404792853145008, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
+      propertyPath: m_TagString
+      value: MapObject
       objectReference: {fileID: 0}
     - target: {fileID: 4676404792853145009, guid: e1be48ee001b26044aedfae7612059c3, type: 3}
       propertyPath: m_RootOrder
@@ -1531,7 +1569,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
-    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1681,7 +1718,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
 --- !u!223 &2121782299
 Canvas:
   m_ObjectHideFlags: 0
@@ -1731,9 +1767,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 567736698513639294, guid: 6dd37fac5e468af4a8570a587713fda3, type: 3}
+      propertyPath: unitPlaced
+      value: 
+      objectReference: {fileID: 1094050073}
+    - target: {fileID: 712688270308347615, guid: 6dd37fac5e468af4a8570a587713fda3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2568199047421988651, guid: 6dd37fac5e468af4a8570a587713fda3, type: 3}
       propertyPath: m_Name
       value: Horseman
+      objectReference: {fileID: 0}
+    - target: {fileID: 2568199047421988651, guid: 6dd37fac5e468af4a8570a587713fda3, type: 3}
+      propertyPath: m_TagString
+      value: PlayerUnit
       objectReference: {fileID: 0}
     - target: {fileID: 6669957335846437559, guid: 6dd37fac5e468af4a8570a587713fda3, type: 3}
       propertyPath: m_RootOrder
