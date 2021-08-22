@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Aleksandr\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Aleksandr\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_GameJamAugust.545135920.00" t="ExcludeRecursive" />
+    <e p="E:\Work\GameDev\GameJams\BatyaJam2021\GameJamAugust" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="BattleSystem.cs" t="Include" />
+          <e p="DoMoveBtnUI.cs" t="Include" />
+          <e p="Interactables" t="Include">
+            <e p="BaseInteractable.cs" t="Include" />
+            <e p="Interactables" t="Include">
+              <e p="MapObjectInteractable.cs" t="Include" />
+              <e p="UnitInteractable.cs" t="Include" />
+            </e>
+          </e>
+          <e p="MouseInteractor.cs" t="Include" />
+          <e p="ScriptableObjects" t="Include">
+            <e p="BaseMapObject.cs" t="Include" />
+            <e p="BaseUnit.cs" t="Include" />
+            <e p="BaseUnitnot.cs" t="Include" />
+            <e p="MapObjectsSO" t="Include">
+              <e p="EntrepotSO.cs" t="Include" />
+              <e p="TownSO.cs" t="Include" />
+            </e>
+            <e p="UnitsSO" t="Include">
+              <e p="HorsemanSO.cs" t="Include" />
+              <e p="SpearmanSO.cs" t="Include" />
+              <e p="SwordmanSO.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Singletone.cs" t="Include" />
+          <e p="TurnManager.cs" t="Include" />
+        </e>
+      </e>
+      <e p="GameJamAugust.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

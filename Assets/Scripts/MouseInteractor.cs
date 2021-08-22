@@ -14,6 +14,9 @@ public class MouseInteractor : MonoBehaviour
     
     private void Update()
     {
+        //Если ход противника, заблокировать управление
+        if(!TurnManager.Instance.isPlayerTurn()) 
+            return;
         InputChecker();
     }
 
