@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4b79c717179d0448403c775662a2f0, type: 3}
   m_Name: Horseman
   m_EditorClassIdentifier: 
-  objectName: Horseman
-  prefabPrefab: {fileID: 2568199047421988651, guid: 6dd37fac5e468af4a8570a587713fda3, type: 3}
+  unitType: 2
+  killUnit: 0
+  moves: 3
+  damage: 1
+  unitPrefab: {fileID: 2568199047421988651, guid: 6dd37fac5e468af4a8570a587713fda3, type: 3}

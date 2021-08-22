@@ -18,6 +18,7 @@ public class MouseInteractor : MonoBehaviour
     private UnitInteractable _selectedUnit;
     private MapObjectInteractable _selectedMapObject;
     
+
     private void Update()
     {
         //Если ход противника, заблокировать управление
@@ -64,7 +65,12 @@ public class MouseInteractor : MonoBehaviour
                          _selectedMapObject = selectedMapObject;
                          if (_selectedUnit && _selectedMapObject.NearMapObjects.Contains(_selectedUnit.UnitPlaced))
                          {
-                             DoMove();
+                             if(_selectedMapObject.ActiveUnit && _selectedMapObject.ActiveUnit.gameObject.CompareTag("PlayerUnit"))
+                                 return;
+                             if(_selectedUnit.CanMove())
+                                DoMove();
+                            
+
                          }
                     }
                        
@@ -137,12 +143,14 @@ public class MouseInteractor : MonoBehaviour
         Transform var1 =_selectedUnit.transform;
         Vector3 var2 = _selectedUnit.UnitPlaced.transform.position;
         Vector3 var3 = _selectedMapObject.transform.position;
-        
 
         StartCoroutine(MoveFromTo(var1, var2, var3, speed));
         //StartCoroutine(waitForMove());
         Debug.Log("End");
-        
+        _selectedUnit.ChangeMoves(1);
+        _selectedMapObject.ActiveUnit = _selectedUnit.gameObject;
+        _selectedUnit.UnitPlaced.ActiveUnit = null;
+        _selectedUnit.UnitPlaced = _selectedMapObject;
         ClearSelected();
     }
    
@@ -168,7 +176,7 @@ public class MouseInteractor : MonoBehaviour
 
     public void ClearSelected()
     {
-        firstMapObject = null;
-        secondMapObject = null;
+        _selectedUnit = null;
+        _selectedMapObject = null;
     }
 }

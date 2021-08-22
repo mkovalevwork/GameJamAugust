@@ -8,7 +8,12 @@ public class MapObjectInteractable : BaseInteractable
     public BaseInteractable[] NearMapObjects => nearMapObjects;
 
     [SerializeField] private GameObject activeUnit;
-    public GameObject ActiveUnit => activeUnit;
+
+    public GameObject ActiveUnit
+    {
+        get => activeUnit;
+        set => activeUnit = value;
+    }
 
     public void setActiveUnit(GameObject unitInteractable)
     {

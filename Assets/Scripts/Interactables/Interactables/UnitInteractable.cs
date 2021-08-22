@@ -6,7 +6,7 @@ public class UnitInteractable : BaseInteractable
     [SerializeField] private BaseUnit unit;
     [SerializeField] private bool moveDoneThisRound;
 
-    [SerializeField]private MapObjectInteractable unitPlaced;
+    [SerializeField] private MapObjectInteractable unitPlaced;
 
     public MapObjectInteractable UnitPlaced
     {
@@ -23,6 +23,8 @@ public class UnitInteractable : BaseInteractable
     private void Start()
     {
         TurnManager.Instance.OnTurnChanged += ChangeTurn;
+        Debug.Log("Unit: " + unit.UnitType);
+        InitMoves();
     }
 
     private void ChangeTurn(TurnStates newturn)
@@ -51,6 +53,6 @@ public class UnitInteractable : BaseInteractable
 
     private void InitMoves()
     {
-        //_moves = количество ходов у юнита
+        _moves = unit.Moves;
     }
 }

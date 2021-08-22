@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d681482b5dc9b47438e479512cc434c4, type: 3}
   m_Name: Swordman
   m_EditorClassIdentifier: 
-  objectName: Swordman
-  prefabPrefab: {fileID: 9166935186961167301, guid: ad946ae2cfe177040a4d9c6397f43f29, type: 3}
+  unitType: 0
+  killUnit: 0
+  moves: 1
+  damage: 3
+  unitPrefab: {fileID: 9166935186961167301, guid: ad946ae2cfe177040a4d9c6397f43f29, type: 3}

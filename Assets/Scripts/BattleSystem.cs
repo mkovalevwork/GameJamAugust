@@ -3,13 +3,9 @@ using UnityEngine;
 public class BattleSystem : MonoBehaviour
 {
   
-    public bool Fight(GameObject firstFighter, GameObject secondFighter)
+    public bool Fight(BaseUnit firstFighter, BaseUnit secondFighter)
     {
-        //if win 1
-        return true;
-
-        //if win 2
-        return false;
+        return firstFighter.KillUnit == secondFighter.UnitType ? firstFighter : secondFighter;
     }
 
     

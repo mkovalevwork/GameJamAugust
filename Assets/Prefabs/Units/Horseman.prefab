@@ -110,3 +110,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unit: {fileID: 11400000, guid: afe80086eb9b1584caa70d416d3a9b0c, type: 2}
+  moveDoneThisRound: 0
+  unitPlaced: {fileID: 0}

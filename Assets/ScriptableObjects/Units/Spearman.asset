@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 642b5693086896a4e8e64434095fb5e9, type: 3}
   m_Name: Spearman
   m_EditorClassIdentifier: 
-  objectName: Spearman
-  prefabPrefab: {fileID: 2031121231184812581, guid: ef78f5c7d4d6f4d4a94a788b28b1d159, type: 3}
+  unitType: 1
+  killUnit: 2
+  moves: 2
+  damage: 2
+  unitPrefab: {fileID: 2031121231184812581, guid: ef78f5c7d4d6f4d4a94a788b28b1d159, type: 3}
